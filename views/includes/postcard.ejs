@@ -1,0 +1,11 @@
+<div class="post">
+            <h4 class="username">@<%= post.username %>~</h4>
+            <p class="content"><%= post.content %></p>
+            <a href="/post/<%= post.id%>/edit">
+                <span class="material-symbols-outlined">edit</span></a>
+
+            <form action="/post/<%= post.id %>/delete?_method=DELETE" method="POST" style="display: inline;">
+                <button type="submit">Delete Post</button>
+            </form>
+
+        </div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="/style.css">
+    <title>Posts</title>
+</head>
+<body>
+    <h1>Quora Posts</h1>
+    <% for(post of data){ %>
+        <div class="post">
+            <h4 class="username">@<%= post.username %>~</h4>
+            <p class="content"><%= post.content %></p>
+             <button onclick="location.href='http://localhost:8080/post/<%= post.id %>'">View</button>
+        </div>
+        
+    <%} %>
+    <button onclick="location.href='http://localhost:8080/post/new'"  style="display: block; margin: 0 auto;">Add new post</button>
+</body>
+</html>
